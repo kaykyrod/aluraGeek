@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Geek</title>
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/reset.css">
+</head>
+<body>
+    <header class="header">
+        <img src="../img/alura-geek-logo.png" alt="Logo da Alura Geek">
+    </header>
+
+    <main class="principal-container">
+
+        <section class="lista-produtos">
+            <h1 class="titulo-produtos">MEUS PRODUTOS:</h1>
+                <div class="card-container" data-card>
+                    
+                </div>
+        </section>
+        
+        <section class="adicionar-produtos">
+            <h1 class="titulo-adicionar">ADICIONAR PRODUTO:</h1>
+            <form class="form-container" data-formulario>
+                <input type="text" name="input-nome" id="input-nome" placeholder="Nome do produto" minlength="3" maxlength="50" required data-nome>
+                <input type="number" name="input-preco" id="input-preco" placeholder="Preço do produto" min="1" step="0.01" required data-preco>
+                <input type="url" name="input-url" id="input-url" placeholder="URL da imagem do produto" required data-url>
+                <div class="adicionar-botoes">
+                    <input type="submit" value="Adicionar" id="adicionar">
+                    <input type="reset" value="Limpar" id="limpar">
+                </div>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <img src="img/alura-geek-logo.png" alt="Logo da Alura Geek">
+        <div>
+            <p>Desenvolvido por <a href="https://github.com/kaykyrod">Kayky</a></p>
+            <p>ALURA LATAM - 2024</p>
+        </div>
+    </footer>
+
+    <script src="./js/conectaApi.js" type="module"></script>
+    <script src="./js/criarProduto.js" type="module"></script>
+    <script src="./js/mostrarProdutos.js" type="module"></script>
+</body>
+</html>
