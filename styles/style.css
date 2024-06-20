@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap');
+
+:root {
+    --roxo: #5300C8;
+    --azul: #03318C;
+
+    --ibm-plex-mono: 'IBM Plex Mono', sans-serif;
+    --press-start-2p: 'Press Start 2P', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--roxo);
+    box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.3);
+    padding: 20px 0;
+}
+
+.principal-container {
+    display: flex;
+    justify-content: center;
+}
+
+.lista-produtos {
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    width: 50vw;
+    padding: 60px 0;
+}
+
+.titulo-produtos {
+    font-family: var(--press-start-2p);
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+.card {
+    font-family: var(--ibm-plex-mono);
+    background-color: var(--roxo);
+    color: #ffffff;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.card > img {
+    width: 176px;
+    height: 174px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.card-container--info > p {
+    padding: 10px 0;
+}
+
+.card-container--value {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-container--value > p {
+    font-weight: 700;
+}
+
+.icone-lixeira {
+    cursor: pointer;
+}
+
+.adicionar-produtos {
+    width: 472px;
+    height: 517px;
+    padding: 60px 40px;
+}
+
+.titulo-adicionar {
+    font-family: var(--press-start-2p);
+    font-size: 24px;
+    text-align: center;
+    padding: 0 40px 40px 40px;
+}
+
+.form-container {
+    display: flex;    
+    flex-direction: column;
+    gap: 40px;
+}
+
+#input-nome, 
+#input-preco, 
+#input-url {
+    width: 392px;
+    height: 58px;
+    border: 3px solid var(--azul);
+    border-radius: 30px;
+    padding: 0 10px;
+    color: var(--azul);
+    font-weight: 600;
+}
+
+#input-nome::placeholder, 
+#input-preco::placeholder, 
+#input-url::placeholder {
+    font-weight: 600;
+}
+
+.adicionar-botoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+#adicionar {
+    width: 188px;
+    height: 55px;
+    background-color: var(--azul);
+    border: 3px solid var(--azul);
+    border-radius: 15px;
+    color: #ffffff;
+    font-family: var(--ibm-plex-mono);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#limpar {
+    width: 188px;
+    height: 55px;
+    background-color: #ffffff;
+    border: 3px solid var(--azul);
+    border-radius: 15px;
+    color: var(--azul);
+    font-family: var(--ibm-plex-mono);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--roxo);
+    color: #ffffff;
+    padding: 24px 0;
+    font-family: var(--ibm-plex-mono);
+}
+
+.footer p:nth-child(2) {
+    font-weight: 200;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer a {
+    color: black;
+    font-weight: 600;
+}
+
+
+/*Responsividade Mobile */
+@media (max-width: 768px) {
+    .header {
+        margin-bottom: 0;
+    }
+
+    .principal-container {
+        display: flex;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+    .lista-produtos {
+        order: 2;
+        height: 45vh;
+        width: 60vw;
+        padding: 0;
+    }
+
+    .adicionar-produtos {
+        padding: 20px 0 0 0;
+    }
+
+    .card-container {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    #input-nome, 
+    #input-preco, 
+    #input-url {
+    margin: auto;
+    width: 90%;
+    }
+    
+    .adicionar-botoes {
+        justify-content: space-around;
+    }
+
+}
